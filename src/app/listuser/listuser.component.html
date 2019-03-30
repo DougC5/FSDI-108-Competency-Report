@@ -1,0 +1,23 @@
+<h1 class="my-2">Registered users in the system</h1>
+<!-- <ul>
+ <li *ngFor="let theUser of allUsers">{{ theUser.firstName }}</li> 
+</ul> -->
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let theUser of allUsers">
+      <td>{{ theUser.firstName }}</td>
+      <td>{{ theUser.lastName }}</td>
+      <td>{{ theUser.userName }}</td>
+      <td>{{ theUser.email }}</td>
+    </tr>
+  </tbody>
+</table>

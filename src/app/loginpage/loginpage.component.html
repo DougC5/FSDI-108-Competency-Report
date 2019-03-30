@@ -1,0 +1,25 @@
+<form>
+
+  <div *ngIf="validCredentials === false" class="alert alert-danger">Invalid Data Please check</div>
+  
+    <div class="form-group mt-4">
+      <label for="exampleInputEmail1">Email address</label>
+      <input [(ngModel)]="email" name="email" type="email" class="form-control col-md-6" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" [(ngModel)]="password" name="password"class="form-control col-md-6" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    
+    <button type="submit" (click)="btnLogin()" class="btn btn-primary">Submit</button>
+
+  </form>
+
+  <div *ngIf="this.shared.successState === true" class="alert alert-success mt-3" role="alert">
+      Thank you for logging in. Please add a user, or log out
+    </div>
+    
+    <div *ngIf="this.shared.successState === false" class="alert alert-light mt-3" role="alert">
+        You are currently logged out
+      </div>
